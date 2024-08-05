@@ -1,9 +1,14 @@
 package com.devteria.identity_service.dto.request;
 
+import jakarta.validation.constraints.Size;
+
 import java.time.LocalDate;
 
 public class UserCreationRequest {
+    @Size(min = 4 ,message = "USERNAME_INVALID") // Truyen theo key cua ErrorCode
     private String username;
+    // Khai bao validation cho password
+    @Size(min = 8 ,message = "INVALID_PASSWORD")
     private String password;
     private String firstname;
     private String lastname;

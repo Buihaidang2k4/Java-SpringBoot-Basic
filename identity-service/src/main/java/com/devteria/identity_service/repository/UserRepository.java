@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository // se giup bean tao repo
 public interface UserRepository extends JpaRepository<User, String> {
-
-
+   // Jpa tu dong res query kiem tra su ton tai ham nay
+    boolean existsByUsername(String username);
 }
